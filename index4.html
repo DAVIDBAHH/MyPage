@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">DAVID_BAHH</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index2.html">Skills</a>
+            <a href="index3.html" >Hobbies</a>
+            <a href="#" class="active">Gallery</a>
+        </nav>
+    </header>
+    <div class="container">
+
+        <h1 class="maintext">Image Gallery</h1>
+
+        <div class="image-container">
+
+            <div class="image"><img src="boxing.jpg" ></div>
+            <div class="image"><img src="programing.jpg" ></div>
+            <div class="image"><img src="robotex2.jpg" ></div>
+            <div class="image"><img src="judo.jpg" ></div>
+            <div class="image"><img src="html.webp" ></div>
+
+        </div>
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="css.png" alt="">
+        </div>
+    </div>
+
+<script>
+    document.querySelectorAll('.image-container img').forEach(image =>{
+        image.onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+});
+
+document.querySelector('.popup-image span').onclick = () =>{
+    document.querySelector('.popup-image').style.display = 'none';
+}
+</script>
+</body>
+</html>
